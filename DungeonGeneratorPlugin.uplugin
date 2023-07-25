@@ -1,0 +1,35 @@
+{
+	"FileVersion": 1,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "HauntedWorld",
+	"Description": "HauntedWolrd Generator",
+	"Category": "Other",
+	"CreatedBy": "",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EngineVersion": "5.2.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "DungeonGeneratorPlugin",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"FastNoiseLite"
+			  ],
+			  "PublicDependencyModuleNames": [
+				"FastNoiseLite"
+			  ],				
+
+			"PlatformAllowList": [
+				"Win64"
+			]
+		}
+	],
+	
+	"Plugins": []
+}
