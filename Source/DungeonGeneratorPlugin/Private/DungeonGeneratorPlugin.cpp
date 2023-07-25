@@ -1,4 +1,3 @@
-// Copyright (c) 2022 Orfeas Eleftheriou
 
 #include "DungeonGeneratorPlugin.h"
 #include "DungeonGenerator.h"
