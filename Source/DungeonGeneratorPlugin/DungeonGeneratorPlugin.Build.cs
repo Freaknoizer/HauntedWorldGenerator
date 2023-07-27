@@ -1,17 +1,17 @@
 using UnrealBuildTool;
 
-public class DungeonGenerator : ModuleRules
+public class DungeonGeneratorPlugin : ModuleRules
 {
-    public DungeonGenerator(ReadOnlyTargetRules Target) : base(Target)
+    public DungeonGeneratorPlugin(ReadOnlyTargetRules Target) : base(Target)
     {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
         PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "FastNoiseLite"});
 
-        PrivateDependencyModuleNames.AddRange(new string[] { "FastNoiseLite", "ProceduralMeshComponent" });
+        PrivateDependencyModuleNames.AddRange(new string[] { "ProceduralMeshComponent" });
 
-        PublicIncludePaths.AddRange(new string[] { "Plugins/DungeonGeneratorPlugin/Source/DungeonGeneratorPlugin/Public" });
+        PublicIncludePaths.AddRange(new string[] { "Plugins/HauntedWorldGenerator/Source/DungeonGeneratorPlugin/Public" });
 
-        PrivateIncludePaths.AddRange(new string[] { "Plugins/DungeonGeneratorPlugin/Source/DungeonGeneratorPlugin/Private" });
+        PrivateIncludePaths.AddRange(new string[] { "Plugins/HauntedWorldGenerator/Source/DungeonGeneratorPlugin/Private" });
     }
 }

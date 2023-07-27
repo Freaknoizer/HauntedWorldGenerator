@@ -1,5 +1,4 @@
 #include "DungeonGenerator.h"
-#include "FastNoise.h"
 
 void UDungeonGenerator::GenerateDungeon(int32 Rows, int32 Columns, int32 Floors, int32 RoomCount, float Scale, int32 Octaves, float Persistence, float Lacunarity, int32 Seed)
 {
@@ -7,12 +6,11 @@ void UDungeonGenerator::GenerateDungeon(int32 Rows, int32 Columns, int32 Floors,
     TileMatrix->SetSize(Rows, Columns, Floors);
     TileMatrix->SetRoomSize(5, 10);
 
-    FastNoise NoiseGenerator;
     NoiseGenerator.SetSeed(Seed);
-    NoiseGenerator.SetFrequency(Scale);
-    NoiseGenerator.SetFractalOctaves(Octaves);
-    NoiseGenerator.SetFractalPersistence(Persistence);
-    NoiseGenerator.SetFractalLacunarity(Lacunarity);
+    NoiseGenerator.SetFrequency(NoiseScale);
+    NoiseGenerator.SetFractalOctaves(NoiseOctaves);
+    NoiseGenerator.SetFractalPersistence(NoisePersistence);
+    NoiseGenerator.SetFractalLacunarity(NoiseLacunarity);
 
     for (int32 i = 0; i < Floors; i++)
     {
