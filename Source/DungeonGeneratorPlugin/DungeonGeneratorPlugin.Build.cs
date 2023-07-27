@@ -12,6 +12,6 @@ public class DungeonGeneratorPlugin : ModuleRules
 
         PublicIncludePaths.AddRange(new string[] { "Plugins/HauntedWorldGenerator/Source/DungeonGeneratorPlugin/Public" });
 
-        PrivateIncludePaths.AddRange(new string[] { "Plugins/HauntedWorldGenerator/Source/DungeonGeneratorPlugin/Private" });
+        PrivateIncludePaths.AddRange(new string[] {});
     }
 }
