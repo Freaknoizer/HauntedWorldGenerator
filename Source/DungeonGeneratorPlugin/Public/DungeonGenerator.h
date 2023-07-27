@@ -37,5 +37,5 @@ private:
     UPROPERTY()
     UTileMatrix* TileMatrix;
 
-    FastNoise NoiseGenerator;
+    FastNoiseLite NoiseGenerator;
 };

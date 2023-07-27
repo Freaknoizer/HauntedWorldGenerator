@@ -7,10 +7,10 @@ void UDungeonGenerator::GenerateDungeon(int32 Rows, int32 Columns, int32 Floors,
     TileMatrix->SetRoomSize(5, 10);
 
     NoiseGenerator.SetSeed(Seed);
-    NoiseGenerator.SetFrequency(NoiseScale);
-    NoiseGenerator.SetFractalOctaves(NoiseOctaves);
-    NoiseGenerator.SetFractalPersistence(NoisePersistence);
-    NoiseGenerator.SetFractalLacunarity(NoiseLacunarity);
+    NoiseGenerator.SetFrequency(Scale);
+    NoiseGenerator.SetFractalOctaves(Octaves);
+    NoiseGenerator.SetFractalPersistence(Persistence);
+    NoiseGenerator.SetFractalLacunarity(Lacunarity);
 
     for (int32 i = 0; i < Floors; i++)
     {
@@ -18,7 +18,7 @@ void UDungeonGenerator::GenerateDungeon(int32 Rows, int32 Columns, int32 Floors,
         {
             for (int32 k = 0; k < Columns; k++)
             {
-                float NoiseValue = NoiseGenerator.GetNoise(j, k);
+                float NoiseValue = NoiseGenerator.GetNoise((float)j, (float)k);
                 ETileType TileValue = NoiseValue > 0.5f ? ETileType::Wall : ETileType::Floor;
                 TileMatrix->SetTileValue(j, k, i, TileValue);
             }
